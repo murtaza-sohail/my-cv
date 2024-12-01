@@ -1,74 +1,157 @@
+ .circle-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
 
-body{
-    font-family: Helvetica, Arial, sans-serif;
-  }
-  .container{
-    width: 50%;
-    margin: 0 auto;
-  }
-  @keyframes load{
-    from {
-      width: 0%
-    }
-  }
-  @-webkit-keyframes load{
-    from {
-      width: 0%
-    }
-  }
-  @-moz-keyframes load{
-    from {
-      width: 0%
-    }
-  }
-  @-o-keyframes load{
-    from {
-      width: 0%
-    }
-  }
-  
-  .bar{
-    background-color: #EEE;
-    padding: 2px;
-    border-radius: 15px;
-    margin-bottom: 5px;
-    font-size: 14px;
-    color: #FFF;
-    font-weight: bold;
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
-  }
-  .bar::before{
-    content:  attr(data-skill);
-    background-color: #f3b0ff;
-    display: inline-block;
-    padding: 5px 0 5px 10px;
-    border-radius: inherit;
-    animation: load 2s 0s;
-    -webkit-animation: load 2s 0s;
-    -moz-animation: load 2s 0s;
-    -o-animation: load 2s 0s;
-  }
-  
-  .bar.front::before{
-    background-color: #ffcc33;
-  }
-  .bar.back::before{
-    background-color: #a6cfe3;
-  }
-  
-  .bar.learning::before{
-    width: calc(20% - 10px);
-  }
-  .bar.basic::before{
-    width: calc(40% - 10px);
-  }
-  .bar.intermediate::before{
-    width: calc(60% - 10px);
-  }
-  .bar.advanced::before{
-    width: calc(80% - 10px);
-  }
-  .bar.expert::before{
-    width: calc(100% - 10px);
-  }
-  
+.circle-box {
+  text-align: center;
+}
+
+.progress-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: conic-gradient(
+      #d3d3d3 0%,
+      #d3d3d3 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  position: relative;
+  margin: auto;
+}
+
+.progress-circle span {
+  position: absolute;
+  font-size: 1.2rem;
+}
+
+/* Skill-Specific Styles */
+.progress-circle.html {
+  background: conic-gradient(
+      #ff5722 0%,
+      #ff5722 100%
+  );
+}
+
+.progress-circle.css {
+  background: conic-gradient(
+      #2196f3 0%,
+      #2196f3 100%
+  );
+}
+
+.progress-circle.javascript {
+  background: conic-gradient(
+      
+      green 20%,
+      green
+  );
+}
+
+.progress-circle.article-writing {
+  background: conic-gradient(
+      #ff9800 0%,
+      #ff9800 100%
+  );
+}
+
+.progress-circle.gaming {
+  background: conic-gradient(
+      #673ab7 0%,
+      #673ab7 100%
+  );
+}
+
+.progress-circle.content-writing {
+  background: conic-gradient(
+      #009688 0%,
+      #009688 100%
+  );
+}
+
+.progress-circle.blog-writing {
+  background: conic-gradient(
+      #e91e63 0%,
+      #e91e63 100%
+  );
+}
+
+/* Interests Styles */
+.progress-circle.book-reading {
+  background: conic-gradient(
+      #4caf50 0%,
+      #4caf50 100%
+  );
+}
+
+.progress-circle.gaming {
+  background: conic-gradient(
+      #673ab7 0%,
+      #673ab7 100%
+  );
+}
+
+.progress-circle.movies {
+  background: conic-gradient(
+      #ff5722 0%,
+      #ff5722 100%
+  );
+}
+
+
+/* General Circle Container */
+.circle-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.circle-box {
+  text-align: center;
+}
+
+/* Circular Progress Bars */
+.progress-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: conic-gradient(
+      #d3d3d3 0%,
+      #d3d3d3 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: auto;
+}
+
+/* Interest-Specific Styles */
+.progress-circle.book-reading {
+  background: conic-gradient(
+      #4caf50 0%,
+      #4caf50 100%
+  ); /* Green */
+}
+
+.progress-circle.gaming {
+  background: conic-gradient(
+      #673ab7 0%,
+      #673ab7 100%
+  ); /* Purple */
+}
+
+.progress-circle.movies {
+  background: conic-gradient(
+      #ff5722 0%,
+      #ff5722 100%
+  ); /* Orange */
+}
